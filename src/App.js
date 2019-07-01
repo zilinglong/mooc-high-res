@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import LogicalUi from './components/LogicalUi';
 import Events from './components/Events';
+import DomOpe from './components/DomOpe';
 
 function showCircle() {
   const colors = ['#393E41', '#E94F37', '#1C89BF', '#A1D363'];
@@ -40,6 +41,7 @@ function App() {
       <p>所有颜色均生成圆：</p>
       {showCircle2()}
       <Events />
+      <DomOpe />
     </div>
   );
 }
