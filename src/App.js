@@ -3,7 +3,22 @@ import logo from './logo.svg';
 import './App.css';
 import LogicalUi from './components/LogicalUi';
 
+function showCircle() {
+  const colors = ['#393E41', '#E94F37', '#1C89BF', '#A1D363'];
+  const ran = Math.floor(Math.random() * colors.length);
+  return <LogicalUi bgColor={colors[ran]} />;
+}
+function showCircle2() {
+  const colors = ['#393E41', '#E94F37', '#1C89BF', '#A1D363'];
+  const ran = Math.floor(Math.random() * colors.length);
+  let arr = [];
+  for (let i = 0; i < colors.length; i++) {
+    arr.push(<LogicalUi key={i} bgColor={colors[i]} />);
+  }
+  return arr;
+}
 function App() {
+  // const circle = <LogicalUi bgColor="#0f0" />;
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +35,10 @@ function App() {
           Learn React
         </a>
       </header>
-      <LogicalUi bgColor="#0f0" />
+      <p>随机根据某一个颜色生成圆：</p>
+      {showCircle()}
+      <p>所有颜色均生成圆：</p>
+      {showCircle2()}
     </div>
   );
 }
