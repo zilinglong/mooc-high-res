@@ -18,6 +18,7 @@ class DomOpe extends Component {
       bgColor: this.state.inputValue,
       inputValue: ''
     });
+    this.refs.input.focus();
   }
   render() {
     const { bgColor, inputValue } = this.state;
@@ -29,6 +30,7 @@ class DomOpe extends Component {
             type="text"
             value={inputValue}
             onChange={this.handleChange.bind(this)}
+            ref="input"
           />
           <button onClick={this.changeColor.bind(this)}>改变颜色</button>
         </div>
