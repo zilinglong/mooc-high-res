@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import LogicalUi from './components/LogicalUi';
+import Events from './components/Events';
 
 function showCircle() {
   const colors = ['#393E41', '#E94F37', '#1C89BF', '#A1D363'];
@@ -10,7 +11,6 @@ function showCircle() {
 }
 function showCircle2() {
   const colors = ['#393E41', '#E94F37', '#1C89BF', '#A1D363'];
-  const ran = Math.floor(Math.random() * colors.length);
   let arr = [];
   for (let i = 0; i < colors.length; i++) {
     arr.push(<LogicalUi key={i} bgColor={colors[i]} />);
@@ -39,6 +39,7 @@ function App() {
       {showCircle()}
       <p>所有颜色均生成圆：</p>
       {showCircle2()}
+      <Events />
     </div>
   );
 }
